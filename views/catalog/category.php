@@ -53,8 +53,11 @@
                             </div>
                         </div>
                     <?php endforeach; ?>
-
+                    <div class="col-md-4 col-md-offset-4">
+                        <?=$pagination->get(); ?>
+                    </div>
                 </div><!--features_items-->
+                    <!--Pagination-->
 
 
             </div>

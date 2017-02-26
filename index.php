@@ -7,8 +7,8 @@
 
     // 2. Подключение файлов системы
     define('ROOT',dirname(__FILE__)); //ROOT = /var/www/test
-    require_once(ROOT.'/components/Router.php');
-    require_once(ROOT.'/components/Db.php');
+    require_once(ROOT.'/components/Autoload.php');
+
 
     // 3. Подключение к БД
 

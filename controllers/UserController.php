@@ -1,12 +1,17 @@
 <?php
 
 /**
- * Created by PhpStorm.
- * User: root
- * Date: 27.02.17
- * Time: 0:45
+ * Class UserController
+ * @return bool
+ *
  */
 class UserController
 {
+    public function actionRegister()
+    {
+
+        require_once ROOT . '/views/user/register.php';
+        return true;
+    }
 
 }
