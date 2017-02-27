@@ -2,17 +2,18 @@
 
 <section>
     <div class="container">
-        <div class="row">
+            <div class="row">
+                <h2>Кабинет пользователя</h2><br>
+                <div class="col-md-3">
+                    <h4>Привет, <?php echo $user['name'];?></h4>
+                    <hr>
+                    <div class="list-group">
+                        <a href="/cabinet/edit" class="list-group-item">Редактировать данные</a>
+                        <a href="/cabinet/history" class="list-group-item">Список покупок</a>
+                    </div>
+                </div>
 
-            <h1>Кабинет пользователя</h1>
-            
-            <h3>Привет, <?php echo $user['name'];?></h3>
-            <ul>
-                <li><a href="/cabinet/edit">Редактировать данные</a></li>
-                <li><a href="/cabinet/history">Список покупок</a></li>
-            </ul>
-            
-        </div>
+            </div>
     </div>
 </section>
 
