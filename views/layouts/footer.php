@@ -2,7 +2,7 @@
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <p class="pull-right">Copyright © 2017</p>
+                <p class="pull-right">Misha Kaharlykskyi © 2017</p>
             </div>
         </div>
     </div>

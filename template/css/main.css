@@ -8,18 +8,18 @@
 
 body {
   font-family: 'Roboto', sans-serif;
-  background:;
   position: relative;
-  font-weight:400px;
+  font-weight: 400;
 }
 
 ul li {
   list-style: none;
 }
 
+
 a:hover {
-outline: none;
-text-decoration:none;
+  outline: none;
+  text-decoration:none;
 }
 
 a:focus {
@@ -904,7 +904,6 @@ h2.title {
   transition: height 500ms ease 0s;
   width: 100%;
   display: block;
-  opacity:;
 }
 
 .single-products:hover .product-overlay {
@@ -2138,7 +2137,7 @@ h2.title {
   width: 57px;
 }
 
-.pager-area 
+.pager-area
 .pager li a:hover {
   background: #FE980F;
   color: #fff
@@ -2146,7 +2145,6 @@ h2.title {
 
 .rating-area {
   border: 1px solid #F7F7F0;
-  direction: block;
   overflow: hidden;
 }
 
