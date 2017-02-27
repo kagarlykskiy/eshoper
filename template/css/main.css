@@ -18,8 +18,8 @@ ul li {
 
 
 a:hover {
-outline: none;
-text-decoration:none;
+  outline: none;
+  text-decoration:none;
 }
 
 a:focus {

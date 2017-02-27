@@ -24,6 +24,54 @@ class User
     }
 
     /**
+     * @param $email
+     * @param $password
+     * @return bool true if email/password pare is correct, false if not
+     */
+   public static function checkUserData($email, $password)
+   {
+       $db = Db::getConnection();
+       $pass = "SELECT password FROM user WHERE email = :email";
+       $result = $db->prepare($pass);
+       $result->bindParam(':email', $email, PDO::PARAM_STR);
+       $result->execute();
+       $hash = $result->fetch();
+
+       if(password_verify($password, $hash['password'])) {
+           $sql = "SELECT * FROM user WHERE email = :email AND password = :password";
+
+           $result = $db->prepare($sql);
+           $result->bindParam(':email', $email, PDO::PARAM_STR);
+           $result->bindParam(':password', $hash['password'], PDO::PARAM_STR);
+           $result->execute();
+
+           $user = $result->fetch();
+           if($user) {
+               return $user['id'];
+           }
+       }
+
+       return false;
+   }
+
+    /**
+     * @param $userId
+     */
+   public static function auth($userId)
+   {
+       $_SESSION['user'] = $userId;
+   }
+
+   public static function checkLogged()
+   {
+       if(isset($_SESSION['user'])) {
+           return $_SESSION['user'];
+       }
+
+       header ("Location: /user/login");
+   }
+
+    /**
      * @param $name
      * @return bool true if name is valid else return true
      */
@@ -53,7 +101,7 @@ class User
      */
     public static function checkEmail($email)
     {
-        if(filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
             return true;
         }
         return false;
@@ -72,10 +120,21 @@ class User
         $result->bindParam(':email', $email, PDO::PARAM_STR);
         $result->execute();
 
-        if($result->fetchColumn()) {
+        if ($result->fetchColumn()) {
             return true;
         }
         return false;
+    }
+
+    /**
+     * @return bool true if user is guest
+     */
+    public static function isGuest()
+    {
+        if (isset($_SESSION['user'])) {
+            return false;
+        }
+        return true;
     }
 
 }
