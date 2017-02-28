@@ -4,7 +4,7 @@
     <div class="container">
         <div class="row">
 
-            <div class="col-sm-4 col-sm-offset-4 padding-right">
+            <div class="col-sm-3 padding-right">
                 
                 <?php if (isset($result) && $result): ?>
                     <div class="alert alert-success" role="alert">
@@ -34,8 +34,7 @@
                     </div><!--/sign up form-->
                 
                 <?php endif; ?>
-                <br/>
-                <br/>
+                <br><br><br><br>
             </div>
         </div>
     </div>

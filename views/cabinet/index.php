@@ -2,8 +2,9 @@
 
 <section>
     <div class="container">
+        <h2>Кабинет пользователя</h2><br>
             <div class="row">
-                <h2>Кабинет пользователя</h2><br>
+
                 <div class="col-md-3">
                     <h4>Привет, <?php echo $user['name'];?></h4>
                     <hr>
@@ -14,6 +15,7 @@
                 </div>
 
             </div>
+        <br><br><br><br><br><br>
     </div>
 </section>
 

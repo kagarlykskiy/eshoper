@@ -22,11 +22,10 @@
                             <?php endforeach; ?>
                     <?php endif; ?>
                 </div><!--/sign up form-->
-
-                <br/>
-                <br/>
+                <br/><br/>
+                <br/><br/><br/><br/><br/><br/>
             </div>
-                    </div>
+        </div>
     </div>
 </section>
 
