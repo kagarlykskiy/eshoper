@@ -33,7 +33,7 @@ class UserController
             }
 
             if(User::checkEmailExists($email)) {
-                $errors[] = 'Такой email уже зарегестрирован!';
+                $errors[] = 'Такой email уже зарегистрирован!';
             }
 
             if($errors == false) {

@@ -69,13 +69,14 @@
                 <div class="col-sm-8">
                     <div class="shop-menu pull-right">
                         <ul class="nav navbar-nav">
-                            <li><a href="/">
+                            <li><a href="/cart/">
                                     <i class="fa fa-shopping-cart"></i>
-                                    Корзина&nbsp;(<span class="cart-count"><?=Cart::countItems(); ?>)</span>
+                                    Корзина&nbsp;(<span id="cart-count"><?=Cart::countItems(); ?></span>)
                                 </a>
                             </li>
                         <?php if (User::isGuest()): ?>
                             <li><a href="/user/login/"><i class="fa fa-lock"></i> Вход</a></li>
+                            <li><a href="/user/register/"><i class="fa fa-sign-in"></i> Регистрация</a></li>
                         <?php else: ?>
                             <li><a href="/cabinet/"><i class="fa fa-user"></i> Аккаунт</a></li>
                             <li><a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a></li>

@@ -39,8 +39,8 @@
                                 <span>
                                             <span>Цена: <?=$product['price']?> UAH</span>
                                             <label>Количество: </label>
-                                            <input type="text" value="3" />
-                                            <button type="button" class="btn btn-fefault cart">
+                                            <input type="text" value="3" /><hr>
+                                            <button type="button" data-id="<?=$latestProductsItem['id']?>" class="btn btn-fefault add-to-cart">
                                                 <i class="fa fa-shopping-cart"></i>
                                                 В корзину
                                             </button>
@@ -68,4 +68,4 @@
 <br/>
 <br/>
 
-<?php include ROOT."/views/layouts/footer.php" ?>
+<?php //include ROOT."/views/layouts/footer.php" ?>

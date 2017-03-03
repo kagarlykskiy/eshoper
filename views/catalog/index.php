@@ -42,7 +42,8 @@
                                         <p>
                                             <?=$latestProductsItem['name']?>
                                         </p>
-                                        <a href="/" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                        <a href="/" data-id="<?=$latestProductsItem['id']?>" class="btn btn-default add-to-cart">
+                                            <i class="fa fa-shopping-cart"></i>В корзину</a>
                                     </div>
                                     <?php
                                     if($latestProductsItem['is_new']) {?>

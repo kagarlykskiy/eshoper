@@ -2,7 +2,7 @@
 
 class Product
 {
-    const SHOW_BY_DEFAULT = 3;
+    const SHOW_BY_DEFAULT = 6;
 
     public static function getLatestProducts($count = self::SHOW_BY_DEFAULT)
     {
@@ -68,5 +68,31 @@ class Product
         return $row['count'];
     }
 
+    public static function getProductsByIds($idsArray)
+    {
+        $products = array();
+
+        $db = Db::getConnection();
+
+        $idsString = implode(',', $idsArray); //возвращает строку из елементов массива разделенных запятой
+
+        $sql = "SELECT * FROM product WHERE status = 1 AND id IN ($idsString)";
+
+        $result = $db->query($sql);
+        $result->setFetchMode(PDO::FETCH_ASSOC);
+
+        $i = 0;
+
+        while($row = $result->fetch()) {
+            $products[$i]['id'] = $row['id'];
+            $products[$i]['code'] = $row['code'];
+            $products[$i]['name'] = $row['name'];
+            $products[$i]['price'] = $row['price'];
+            $i++;
+        }
+
+        return $products;
+
+    }
 
 }
