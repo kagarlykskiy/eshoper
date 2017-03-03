@@ -43,7 +43,7 @@
                                         <p>
                                             <?=$latestProductsItem['name']?>
                                         </p>
-                                        <a href="/" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
+                                        <a href="/cart/add/<?=$latestProductsItem['id']?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>В корзину</a>
                                     </div>
                                     <?php
                                     if($latestProductsItem['is_new']) {?>
@@ -64,5 +64,3 @@
         </div>
     </div>
 </section>
-<!--footer-->
-<?php include ROOT."/views/layouts/footer.php" ?>
