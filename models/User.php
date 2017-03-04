@@ -121,6 +121,14 @@ class User
         return false;
     }
 
+    public static function checkPhone($phone)
+    {
+        if(strlen($phone) >= 10) {
+            return true;
+        }
+        return false;
+    }
+
     /**
      * @param $password
      * @return bool true if password is valid else return true
