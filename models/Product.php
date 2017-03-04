@@ -22,7 +22,23 @@ class Product
         return $productList;
     }
 
-    
+    public static function getRecommendedProducts($count = self::SHOW_BY_DEFAULT)
+    {
+        $count = intval($count);
+        $db = Db::getConnection();
+        $productRecommendedList = array();
+        $result = $db->query("SELECT id,name,image,price,is_new FROM product WHERE status = 1 AND is_recommended = 1 ORDER BY id DESC LIMIT ".$count);
+        $i = 0;
+        while($row = $result->fetch()) {
+            $productRecommendedList[$i]['id'] = $row['id'];
+            $productRecommendedList[$i]['name'] = $row['name'];
+            $productRecommendedList[$i]['image'] = $row['image'];
+            $productRecommendedList[$i]['price'] = $row['price'];
+            $productRecommendedList[$i]['is_new'] = $row['is_new'];
+            $i++;
+        }
+        return $productRecommendedList;
+    }
 
     public static function getProductsListByCategory($categoryId = false, $page = 1)
     {
