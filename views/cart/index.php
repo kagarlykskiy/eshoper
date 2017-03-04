@@ -27,7 +27,7 @@
                     <h2 class="title text-center">Корзина</h2>
                     
                     <?php if ($productsInCart): ?>
-                        <p>Вы выбрали такие товары:</p>
+                        <p>Вы выбрали товары:</p>
                         <table class="table-bordered table-striped table table-hover cart-table">
                             <tr>
                                 <th>Код товара</th>
@@ -53,12 +53,10 @@
                                 </tr>
                             <?php endforeach; ?>
                                 <tr>
-                                    <td colspan="5" align="center"><b>Общая стоимость:</b>&nbsp;&nbsp;<?php echo $totalPrice;?>&nbsp;грн
-
-                                    </td>
+                                    <td colspan="5" align="center"><b>Общая стоимость:</b>&nbsp;&nbsp;<?php echo $totalPrice;?>&nbsp;грн</td>
                                 </tr>
-                            
                         </table>
+                        <a class="btn btn-default checkout" href="/cart/checkout"><i class="fa fa-shopping-cart"></i> Оформить заказ</a>
                     <?php else: ?>
                         <p>Корзина пуста</p>
                     <?php endif; ?>
