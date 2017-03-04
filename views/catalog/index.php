@@ -32,7 +32,7 @@
                                 <div class="single-products">
                                     <div class="productinfo text-center">
                                         <a href="/product/<?=$latestProductsItem['id'];?>">
-                                            <img src="<?=$latestProductsItem['image'];?>" alt="chromeDAUN-<?=$latestProductsItem['id'];?>" />
+                                            <img src="../../template/images/shop/product10.jpg" >
                                         </a>
                                         <h2>
                                             <a href="/product/<?=$latestProductsItem['id'];?>">

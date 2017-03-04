@@ -9,35 +9,37 @@ class Product
         $count = intval($count);
         $db = Db::getConnection();
         $productList = array();
-        $result = $db->query("SELECT id,name,image,price,is_new FROM product WHERE status = 1 ORDER BY id DESC LIMIT ".$count);
+        $result = $db->query("SELECT id,name,price,is_new FROM product WHERE status = 1 ORDER BY id DESC LIMIT ".$count);
         $i = 0;
         while ($row = $result->fetch()) {
             $productList[$i]['id'] = $row['id'];
             $productList[$i]['name'] = $row['name'];
-            $productList[$i]['image'] = $row['image'];
+            //$productList[$i]['image'] = $row['image'];
             $productList[$i]['price'] = $row['price'];
             $productList[$i]['is_new'] = $row['is_new'];
             $i++;
         }
         return $productList;
     }
-    #adad
-    public static function getRecommendedProducts($count = self::SHOW_BY_DEFAULT)
+
+    public static function getRecommendedProducts()
     {
-        $count = intval($count);
+        // Соединение с БД
         $db = Db::getConnection();
-        $productRecommendedList = array();
-        $result = $db->query("SELECT id,name,image,price,is_new FROM product WHERE status = 1 AND is_recommended = 1 ORDER BY id DESC LIMIT ".$count);
+        // Получение и возврат результатов
+        $result = $db->query('SELECT id, name, price, is_new FROM product '
+            . 'WHERE status = "1" AND is_recommended = "1" '
+            . 'ORDER BY id DESC');
         $i = 0;
-        while($row = $result->fetch()) {
-            $productRecommendedList[$i]['id'] = $row['id'];
-            $productRecommendedList[$i]['name'] = $row['name'];
-            $productRecommendedList[$i]['image'] = $row['image'];
-            $productRecommendedList[$i]['price'] = $row['price'];
-            $productRecommendedList[$i]['is_new'] = $row['is_new'];
+        $productsList = array();
+        while ($row = $result->fetch()) {
+            $productsList[$i]['id'] = $row['id'];
+            $productsList[$i]['name'] = $row['name'];
+            $productsList[$i]['price'] = $row['price'];
+            $productsList[$i]['is_new'] = $row['is_new'];
             $i++;
         }
-        return $productRecommendedList;
+        return $productsList;
     }
 
     public static function getProductsListByCategory($categoryId = false, $page = 1)
@@ -48,12 +50,12 @@ class Product
 
             $db = Db::getConnection();
             $products = array();
-            $result = $db->query("SELECT id,name,image,price,is_new FROM product WHERE status = 1 AND category_id = ".$categoryId." ORDER BY id ASC LIMIT ".self::SHOW_BY_DEFAULT." OFFSET ".$offset);
+            $result = $db->query("SELECT id,name,price,is_new FROM product WHERE status = 1 AND category_id = ".$categoryId." ORDER BY id ASC LIMIT ".self::SHOW_BY_DEFAULT." OFFSET ".$offset);
             $i = 0;
             while ($row = $result->fetch()) {
                 $products[$i]['id'] = $row['id'];
                 $products[$i]['name'] = $row['name'];
-                $products[$i]['image'] = $row['image'];
+                //$products[$i]['image'] = $row['image'];
                 $products[$i]['price'] = $row['price'];
                 $products[$i]['is_new'] = $row['is_new'];
                 $i++;
