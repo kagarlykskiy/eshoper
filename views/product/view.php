@@ -40,10 +40,8 @@
                                             <span>Цена: <?=$product['price']?> UAH</span>
                                             <label>Количество: </label>
                                             <input type="text" value="3" /><hr>
-                                            <button type="button" data-id="<?=$latestProductsItem['id']?>" class="btn btn-fefault add-to-cart">
-                                                <i class="fa fa-shopping-cart"></i>
-                                                В корзину
-                                            </button>
+                                            <a href="/" data-id="<?=$product['id']?>" class="btn btn-default add-to-cart">
+                                            <i class="fa fa-shopping-cart"></i>В корзину</a>
                                         </span>
                                 <p><b>Наличие:</b> На складе</p>
                                 <p><b>Состояние:</b> Новое</p>
@@ -68,4 +66,5 @@
 <br/>
 <br/>
 
-<?php //include ROOT."/views/layouts/footer.php" ?>
+
+<?php include ROOT."/views/layouts/footer.php" ?>

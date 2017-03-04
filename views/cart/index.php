@@ -28,12 +28,13 @@
                     
                     <?php if ($productsInCart): ?>
                         <p>Вы выбрали такие товары:</p>
-                        <table class="table-bordered table-striped table table-hover">
+                        <table class="table-bordered table-striped table table-hover cart-table">
                             <tr>
                                 <th>Код товара</th>
                                 <th>Название</th>
                                 <th>Стомость, грн</th>
                                 <th>Количество, шт</th>
+                                <th></th>
                             </tr>
                             <?php foreach ($products as $product): ?>
                                 <tr>
@@ -44,11 +45,15 @@
                                         </a>
                                     </td>
                                     <td><?php echo $product['price'];?></td>
-                                    <td><?php echo $productsInCart[$product['id']];?></td>                        
+                                    <td><?php echo $productsInCart[$product['id']];?></td>
+                                    <td><a class="btn btn-default delete" href="/cart/delete/<?=$product['id']?>">
+                                            <i class="fa fa-times" title="Удалить"></i>
+                                        </a>
+                                    </td>
                                 </tr>
                             <?php endforeach; ?>
                                 <tr>
-                                    <td colspan="4" align="center"><b>Общая стоимость:</b>&nbsp;&nbsp;<?php echo $totalPrice;?>&nbsp;грн
+                                    <td colspan="5" align="center"><b>Общая стоимость:</b>&nbsp;&nbsp;<?php echo $totalPrice;?>&nbsp;грн
 
                                     </td>
                                 </tr>

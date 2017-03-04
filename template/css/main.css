@@ -16,6 +16,9 @@ ul li {
   list-style: none;
 }
 
+table.cart-table>tbody>tr>td {
+  vertical-align: middle !important;
+}
 
 a:hover {
   outline: none;

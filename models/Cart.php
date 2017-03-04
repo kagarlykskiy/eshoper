@@ -23,6 +23,12 @@ class Cart
         return self::countItems();
     }
 
+    public static function deleteProduct($id)
+    {
+        $id = intval($id);
+        unset($_SESSION['products'][$id]);
+    }
+
     /**
      * @return int count of items in session
      */
