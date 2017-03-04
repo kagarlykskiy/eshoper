@@ -21,7 +21,7 @@ class Product
         }
         return $productList;
     }
-
+    #adad
     public static function getRecommendedProducts($count = self::SHOW_BY_DEFAULT)
     {
         $count = intval($count);
