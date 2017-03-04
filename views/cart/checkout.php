@@ -38,11 +38,12 @@
                         <div class="col-sm-6 col-sm-offset-3">
                             <p>Выбрано товаров: <?php echo $totalQuantity; ?>, на сумму: <?php echo $totalPrice; ?>, грн.</p><br/>
                             <?php if (isset($errors) && is_array($errors)): ?>
-                                <ul>
                                     <?php foreach ($errors as $error): ?>
-                                        <li> - <?php echo $error; ?></li>
+                                        <div class="alert alert-danger" role="alert">
+                                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                            <?=$error?>
+                                        </div>
                                     <?php endforeach; ?>
-                                </ul>
                             <?php endif; ?>
 
                             <p>Для оформления заказа заполните форму. Наш менеджер свяжется с Вами.</p>
