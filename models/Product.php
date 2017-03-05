@@ -247,4 +247,43 @@ class Product
         return $products;
     }
 
+    /**
+     * Возвращает текстое пояснение наличия товара:<br/>
+     * <i>0 - Под заказ, 1 - В наличии</i>
+     * @param integer $availability <p>Статус</p>
+     * @return string <p>Текстовое пояснение</p>
+     */
+    public static function getAvailabilityText($availability)
+    {
+        switch ($availability) {
+            case '1':
+                return 'В наличии';
+                break;
+            case '0':
+                return 'Под заказ';
+                break;
+        }
+    }
+    /**
+     * Возвращает путь к изображению
+     * @param integer $id
+     * @return string <p>Путь к изображению</p>
+     */
+    public static function getImage($id)
+    {
+        // Название изображения-пустышки
+        $noImage = 'no-image.png';
+        // Путь к папке с товарами
+        $path = '/upload/images/products/';
+        // Путь к изображению товара
+        $pathToProductImage = $path . $id . '.jpg';
+        if (file_exists($_SERVER['DOCUMENT_ROOT'].$pathToProductImage)) {
+            // Если изображение для товара существует
+            // Возвращаем путь изображения товара
+            return $pathToProductImage;
+        }
+        // Возвращаем путь изображения-пустышки
+        return $path . $noImage;
+    }
+
 }

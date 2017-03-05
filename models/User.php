@@ -120,6 +120,7 @@ class User
        header ("Location: /user/login");
    }
 
+
     /**
      * @param $name
      * @return bool true if name is valid else return true

@@ -42,7 +42,7 @@ class AdminProductController extends AdminBase
                     if (is_uploaded_file($_FILES["image"]["tmp_name"])) {
                         move_uploaded_file($_FILES["image"]["tmp_name"], $_SERVER['DOCUMENT_ROOT'] . "/upload/images/products/{$id}.jpg");
                     }
-                };
+                }
 
                 header("Location: /admin/product");
 

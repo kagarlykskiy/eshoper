@@ -18,8 +18,8 @@ class SiteController
         return true;
     }
 
-    public function actionContact() {
-
+    public function actionContact()
+    {
         $userEmail = '';
         $userText = '';
         $result = false;
@@ -47,6 +47,11 @@ class SiteController
 
         require_once (ROOT.'/views/site/contact.php');
         return true;
+    }
 
+    public function actionAbout()
+    {
+        require_once (ROOT.'/views/site/about.php');
+        return true;
     }
 }

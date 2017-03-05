@@ -49,6 +49,13 @@
                     //Создать объект, вызвать нужный метод (т.е action)
                     $controllerObject = new $controllerName;
                     //call_user_func_array Вызываем метод $controllerObject->$actionName() с массивом аргументов
+
+                    if (!method_exists($controllerName, $actionName)) {
+                        include_once(ROOT.'/views/site/404.html');
+
+                        die();
+                    }
+
                     $result = call_user_func_array(array($controllerObject, $actionName), $parameters);
 
                     if($result != null) {

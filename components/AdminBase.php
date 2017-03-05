@@ -10,7 +10,7 @@ abstract class AdminBase
         if ($user['role'] == 'admin') {
             return true;
         }
-        header("Location: /");
+        header("Location: /404.html");
         die;
     }
 }

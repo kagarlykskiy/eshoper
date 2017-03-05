@@ -51,7 +51,7 @@
                                 <?php endif; ?>
                             </select>
 
-                            <br/><br/>
+                            <br/>
 
                             <p>Производитель</p>
                             <input class="form-control" type="text" name="brand" placeholder="" value="" required>
