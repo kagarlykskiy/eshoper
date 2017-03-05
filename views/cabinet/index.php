@@ -5,8 +5,9 @@
         <h2>Кабинет пользователя</h2><br>
             <div class="row">
 
-                <div class="col-md-3">
-                    <h4>Привет, <?php echo $user['name'];?></h4>
+
+                <div class="col-md-4">
+                    <h5>Привет, <?php echo $user['name'];?></h5>
                     <hr>
                     <div class="list-group">
                         <a href="/cabinet/edit" class="list-group-item">Редактировать данные</a>

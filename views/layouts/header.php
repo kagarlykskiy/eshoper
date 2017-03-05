@@ -80,6 +80,10 @@
                         <?php else: ?>
                             <li><a href="/cabinet/"><i class="fa fa-user"></i> Аккаунт</a></li>
                             <li><a href="/user/logout/"><i class="fa fa-unlock"></i> Выход</a></li>
+                        <?php if (User::isAdmin()): ?>
+                            <li><a href="/admin"><i class="fa fa fa-cog fa-spin"></i> Панель администратора</a></li>
+                        <?php endif; ?>
+
                         <?php endif; ?>
                         </ul>
                     </div>

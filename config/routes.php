@@ -13,6 +13,18 @@
         'user/logout' => 'user/logout',
         'cabinet/edit' => 'cabinet/edit',
         'cabinet' => 'cabinet/index',
+        //Admin products:
+        'admin/product/create' => 'adminProduct/create',
+        'admin/product/update/([0-9])' => 'adminProduct/update/$1',
+        'admin/product/delete/([0-9])' => 'adminProduct/delete/$1',
+        'admin/product' => 'adminProduct/index',
+        //Admin categories:
+        'admin/category/create' => 'adminCategory/create',
+        'admin/category/update/([0-9])' => 'adminCategory/update/$1',
+        'admin/category/delete/([0-9])' => 'adminCategory/delete/$1',
+        'admin/category' => 'adminCategory/index',
+        //
+        'admin' => 'admin/index',
         'contacts' => 'site/contact',
         '' => 'site/index'
     );
