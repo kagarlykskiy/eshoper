@@ -12,7 +12,7 @@
                         <li class="active">Управление товарами</li>
                     </ol>
                 </div>
-
+                <hr>
                 <a href="/admin/product/create" class="btn btn-default back"><i class="fa fa-plus"></i> Добавить товар</a>
 
                 <h4>Список товаров</h4>

@@ -10,10 +10,10 @@
                     <ol class="breadcrumb">
                         <li><a href="/admin">Админпанель</a></li>
                         <li><a href="/admin/product">Управление товарами</a></li>
-                        <li class="active">Редактировать товар</li>
+                        <li class="active">Добавить новый товар</li>
                     </ol>
                 </div>
-
+                <hr>
 
                 <h4>Добавить новый товар</h4>
 
@@ -32,16 +32,16 @@
                         <form action="#" method="post" enctype="multipart/form-data">
 
                             <p>Название товара</p>
-                            <input type="text" name="name" placeholder="" value="">
+                            <input class="form-control" type="text" name="name" placeholder="" value="" required>
 
                             <p>Артикул</p>
-                            <input type="text" name="code" placeholder="" value="">
+                            <input class="form-control" type="text" name="code" placeholder="" value="" required>
 
                             <p>Стоимость, $</p>
-                            <input type="text" name="price" placeholder="" value="">
+                            <input class="form-control" type="text" name="price" placeholder="" value="" required>
 
                             <p>Категория</p>
-                            <select name="category_id">
+                            <select class="form-control" name="category_id">
                                 <?php if (is_array($categoriesList)): ?>
                                     <?php foreach ($categoriesList as $category): ?>
                                         <option value="<?php echo $category['id']; ?>">
@@ -54,18 +54,17 @@
                             <br/><br/>
 
                             <p>Производитель</p>
-                            <input type="text" name="brand" placeholder="" value="">
+                            <input class="form-control" type="text" name="brand" placeholder="" value="" required>
 
                             <p>Изображение товара</p>
                             <input type="file" name="image" placeholder="" value="" class="input-file">
 
                             <p>Детальное описание</p>
-                            <textarea name="description"></textarea>
-
-                            <br/><br/>
+                            <textarea class="form-control" rows="6" name="description" required></textarea>
+                            <br/>
 
                             <p>Наличие на складе</p>
-                            <select name="availability">
+                            <select class="form-control" name="availability">
                                 <option value="1" selected="selected">Да</option>
                                 <option value="0">Нет</option>
                             </select>
@@ -73,7 +72,7 @@
                             <br/><br/>
 
                             <p>Новинка</p>
-                            <select name="is_new">
+                            <select class="form-control" name="is_new">
                                 <option value="1" selected="selected">Да</option>
                                 <option value="0">Нет</option>
                             </select>
@@ -81,7 +80,7 @@
                             <br/><br/>
 
                             <p>Рекомендуемые</p>
-                            <select name="is_recommended">
+                            <select class="form-control" name="is_recommended">
                                 <option value="1" selected="selected">Да</option>
                                 <option value="0">Нет</option>
                             </select>
@@ -89,14 +88,14 @@
                             <br/><br/>
 
                             <p>Статус</p>
-                            <select name="status">
+                            <select class="form-control" name="status">
                                 <option value="1" selected="selected">Отображается</option>
                                 <option value="0">Скрыт</option>
                             </select>
 
                             <br/><br/>
 
-                            <input type="submit" name="submit" class="btn btn-default" value="Сохранить">
+                            <input class="form-control btn btn-default" type="submit" name="submit" value="Сохранить">
 
                             <br/><br/>
 

@@ -30,14 +30,14 @@
                     <div class="col-sm-6">
                         <div class="contactinfo">
                             <h5>
-                                <a href="/admin"><i class="fa fa-edit"></i> Админ панель</a>
+                                <a href="/admin" class="cms">CMS</a>
                             </h5>
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <div class="social-icons pull-right">
+                        <div class="pull-right">
                             <ul class="nav navbar-nav">
-                                <li><a href="/"><i class="fa fa-sign-out"></i>На сайт</a></li>
+                                <li class="back-to-site"><a href="/"><i class="fa fa-sign-out pr"></i>На сайт</a></li>
                             </ul>
                         </div>
                     </div>

@@ -1489,10 +1489,14 @@ h2.title {
     margin-bottom: 30px;
 }
 
+h5 {
+    padding-top: 4px !important;
+}
 
 .login-form form input, .signup-form form input {
-    background: #F0F0E9;
-    border: medium none;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
     color: #696763;
     display: block;
     font-family: 'Roboto', sans-serif;
@@ -1500,13 +1504,45 @@ h2.title {
     font-weight: 300;
     height: 40px;
     margin-bottom: 10px;
-    outline: medium none;
     padding-left: 10px;
     width: 100%;
+    outline: none;
 }
+.login-form form input:focus , .signup-form form input:focus {
+    border: 1px solid #FE980F;
+    transition: 300ms ease-in;
+}
+i.pr {
+    padding-right: 3px;
+}
+
+li.back-to-site>a {
+    color: #FE980F;
+    font-size: 15px;
+}
+
+a.cms {
+    font-size: 20px;
+    color: #FE980F;
+    font-weight: bold;
+    margin-top: 3px !important;
+    border-bottom: 3px solid #F0F0E9;
+}
+
+a.cms:hover {
+    opacity: 0.9;
+    border-bottom: 3px solid #FE980F;
+}
+
 input.input-file {
     background: #fff !important;
     outline: none !important;
+    border: none !important;
+}
+input.input-file:focus {
+    background: #fff !important;
+    outline: none !important;
+    border: none !important;
 }
 
 .login-form form span{
@@ -1577,14 +1613,14 @@ input.input-file {
 
 .breadcrumbs .breadcrumb {
     background:transparent;
-    /*  margin-bottom: 75px;*/
     padding-left: 0;
 }
 
 .breadcrumbs .breadcrumb li a {
     background:#FE980F;
     color: #FFFFFF;
-    padding: 3px 7px;
+    padding: 5px 8px;
+    font-size: 16px;
 }
 
 /*.breadcrumbs .breadcrumb li a:after {
