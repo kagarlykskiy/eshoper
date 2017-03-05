@@ -30,7 +30,7 @@
                             <input type="text" name="sort_order" placeholder="" value="<?php echo $category['sort_order']; ?>">
 
                             <p>Статус</p>
-                            <select name="status">
+                            <select class="form-control" name="status">
                                 <option value="1" <?php if ($category['status'] == 1) echo ' selected="selected"'; ?>>Отображается</option>
                                 <option value="0" <?php if ($category['status'] == 0) echo ' selected="selected"'; ?>>Скрыта</option>
                             </select>
