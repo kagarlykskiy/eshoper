@@ -1,8 +1,11 @@
-<footer id="footer">
+<div class="page-buffer"></div>
+</div>
+
+<footer id="footer" class="page-footer">
     <div class="footer-bottom">
         <div class="container">
             <div class="row">
-                <p class="pull-right">Misha Kaharlykskyi &copy; 2017</p>
+                <p class="pull-right"><a href="https://new.vk.com/kagarlikskiy" class="footer-a">Misha Kaharlykskyi</a> &copy; 2017</p>
             </div>
         </div>
     </div>

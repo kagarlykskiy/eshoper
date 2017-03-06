@@ -22,13 +22,14 @@
                 </div>
             </div>
 
-            <div class="col-sm-9 padding-right">
+            <div class="col-sm-9">
                 <div class="features_items">
                     <h2 class="title text-center">Корзина</h2>
                     
                     <?php if ($productsInCart): ?>
                         <p>Вы выбрали товары:</p>
-                        <table class="table-bordered table-striped table table-hover cart-table">
+                        <div class="table-responsive">
+                        <table class="table table-condensed table-bordered table-striped table table-hover cart-table">
                             <tr>
                                 <th>Код товара</th>
                                 <th>Название</th>
@@ -56,6 +57,7 @@
                                     <td colspan="5" align="center"><b>Общая стоимость:</b>&nbsp;&nbsp;<?php echo $totalPrice;?>&nbsp;грн</td>
                                 </tr>
                         </table>
+                        </div>
                         <a class="btn btn-default checkout" href="/cart/checkout"><i class="fa fa-shopping-cart"></i> Оформить заказ</a>
                     <?php else: ?>
                         <p>Корзина пуста</p>
@@ -69,4 +71,4 @@
     </div>
 </section>
 
-<?php /*//include ROOT . '/views/layouts/footer.php'; */?>
+<?php include ROOT . '/views/layouts/footer.php'; ?>

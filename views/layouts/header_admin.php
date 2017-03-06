@@ -21,7 +21,7 @@
 </head><!--/head-->
 
 <body>
-<div class="page-wrapper">
+<div class="page-wrapper wrapper-admin">
 
     <header id="header"><!--header-->
         <div class="header_top"><!--header_top-->

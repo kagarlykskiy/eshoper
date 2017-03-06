@@ -2,7 +2,7 @@
 
 <section>
     <div class="container">
-        <h2>Кабинет пользователя</h2><br>
+        <h2 class="cabinet">Кабинет пользователя</h2><br>
             <div class="row">
 
 

@@ -6,11 +6,13 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,800,300,600,700);
 @import url(http://fonts.googleapis.com/css?family=Abel);
 
+
 body {
     font-family: 'Roboto', sans-serif;
     position: relative;
     font-weight: 400;
 }
+
 
 table.cart-table>tbody>tr>td, table.cart-table>tbody>tr>th {
     vertical-align: middle;
@@ -46,6 +48,9 @@ html, body {
 .page-wrapper {
     min-height: 100%;
     margin-bottom: -50px;
+}
+.wrapper-admin {
+    background-color: #F5F5F5;
 }
 * html .page-wrapper {
     height: 100%;
@@ -157,12 +162,12 @@ a#scrollUp i{
 }
 
 
-.fa-facebook:hover {
-    background: #0083C9;
+.fa-vk:hover {
+    background: #2192c9;
 }
 
 .fa-twitter:hover  {
-    background:#5BBCEC;
+    background: #5BBCEC;
 }
 
 .fa-linkedin:hover  {
@@ -201,6 +206,25 @@ a#scrollUp i{
     padding: 2px 15px;
     margin-top: 10px;
 }
+
+.footer-a {
+    color: #363432;
+}
+a.footer-a:hover {
+    cursor: pointer;
+    color: #FE980F;
+}
+
+ul.nav>li>a:hover {
+    cursor: pointer;
+}
+
+
+
+ul.nav>li.tel:hover>a {
+    color: #FE980F;
+}
+
 
 .usa:hover {
     background:#FE980F;
@@ -276,7 +300,7 @@ a#scrollUp i{
 }
 
 .mainmenu ul li:first-child{
-    padding-left: 0px;
+    padding-left: 15px;
 }
 
 .mainmenu ul li a {
@@ -925,7 +949,6 @@ h2.title {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
-    height: 34px;
     color: #696763;
 }
 
@@ -1534,8 +1557,18 @@ a.cms:hover {
     border-bottom: 3px solid #FE980F;
 }
 
+img.product-image {
+    padding: 15px;
+}
+
+div.view-product>img {
+    height: 50%;
+}
+
 input.input-file {
-    background: #fff !important;
+    padding-top: 10px;
+    margin-left: -10px;
+    background: #f5f5f5 !important;
     outline: none !important;
     border: none !important;
 }
@@ -2620,3 +2653,32 @@ input.input-file:focus {
 {
     position: relative;
 }
+
+@media screen and (max-width: 480px) {
+    .recommended_items, .social-icons {
+        display: none !important;
+    }
+    ul.nav>li>a {
+        padding-right: 5px;
+    }
+    p {
+        padding-right: 5px;
+    }
+    form, div.alert {
+        margin-right: 15px;
+    }
+    table.table>tbody>tr>th, table.table>tbody>tr>td {
+        font-size: 10px !important;
+    }
+    .signup-form>h2 {
+        text-align: center;
+    }
+    .navbar-toggle {
+        float: left !important;
+        border-radius: 6px;
+    }
+    h2.cabinet {
+        font-size: 22px;
+    }
+}
+
